@@ -19,6 +19,7 @@
 
 import time, logging
 from lib import common
+from check_calc import *
 
 # Parse command line arguments and initialize the radio
 common.init_args('./nrf24-sniffer.py')
