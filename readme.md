@@ -17,6 +17,7 @@ sudo apt-get install sdcc binutils python python-pip
 sudo pip install -U pip
 sudo pip install -U -I pyusb
 sudo pip install -U platformio
+sudo pip install pynput
 ```
 
 ## Supported Hardware
