@@ -3,7 +3,11 @@ def calc_checksum(hex_str):
     input is the payload string which the check sum shall be calculated from
     """
     pld = [hex_str[i:i+2] for i in range(0,len(hex_str),2)]
+<<<<<<< HEAD
     if ~len(hex_str)/2.0).isinteger():
+=======
+    if ~(len(hex_str)/2.0).isinteger():
+>>>>>>> 7dd37c0853a6afe727455ff99c8ce91ead5b1302
         print('No half bytes')
         return 0
     sum = 0
