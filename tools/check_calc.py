@@ -11,4 +11,4 @@ def calc_checksum(hex_str):
     for h in pld:
         sum += int(h,16) 
     chk = 0x100 - int(hex(sum)[-2:],16)
-    print(hex(chk)[2:].zfill(2))
+    return hex(chk)[2:].zfill(2)
