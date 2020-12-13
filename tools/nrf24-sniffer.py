@@ -91,9 +91,11 @@ while True:
     payload = value[1:]
 
     # Log the packet
-    logging.info('{0: >2}  {1: >2}  {2}  {3}'.format(
-              common.channels[channel_index],
-              len(payload),
-              address_string,
-              ':'.join('{:02X}'.format(b) for b in payload)))
+    if len(payload) > 2:
+      if 'C2' == ('{:02X}'.format(payload[1])):
+        logging.info('{0: >2}  {1: >2}  {2}  {3}'.format(
+                  common.channels[channel_index],
+                  len(payload),
+                  address_string,
+                  ':'.join('{:02X}'.format(b) for b in payload)))
 
