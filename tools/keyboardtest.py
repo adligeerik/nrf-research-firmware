@@ -78,7 +78,7 @@ def build_payload(button,x,y,x_scroll,y_scroll):
     unused = '00'
     button_pld = '00'
 
-    pld = pream + cmd + button_pld + unused + x_pld + y_pld + xs_pld + ys_pld
+    pld = pream + cmd + button_pld + unused + x_pld[1:3] + y_pld[2] + x_pld[0] + y_pld[0:2] + xs_pld + ys_pld
     pld = pld + calc_checksum(pld)
     return pld
 
